@@ -20,9 +20,9 @@ def test_text_body_height(browser):
     # assert demo_qa_page.equal_url()
     demo_qa_page.btn_elements.click()
     time.sleep(3)
-  
-    assert elements_page.get_center_text.get_text() == 'Please select an item from left to start practice.'
+    # assert elements_page.equal_url()
 
+    assert elements_page.get_center_text.get_text() == 'Please select an item from left to start practice.'
 
 
 
