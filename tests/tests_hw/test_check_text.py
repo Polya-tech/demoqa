@@ -1,5 +1,6 @@
 
 from pages.demoqa import DemoQa
+import time
 
 
 def test_text_footer(browser):
