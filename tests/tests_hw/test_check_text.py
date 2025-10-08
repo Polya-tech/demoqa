@@ -1,5 +1,6 @@
 
 from pages.demoqa import DemoQa
+from pages.elements_page import ElementPage
 import time
 
 
