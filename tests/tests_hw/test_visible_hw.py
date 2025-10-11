@@ -37,3 +37,4 @@ def test_visible_accordion_default(browser):
     assert not accordion_page.section_content4.visible()
 
 
+
