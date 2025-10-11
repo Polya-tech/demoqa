@@ -25,5 +25,16 @@ def test_text_body_height(browser):
     assert elements_page.get_center_text.get_text() == 'Please select an item from left to start practice.'
 
 
+def test_page_element(browser):
+    elements_page = ElementPage(browser) #создала объект страницы elements
+
+    elements_page.visit() #постила страницу elements
+    # assert elements_page.text_elements.get_text() == 'Please select an item from left to start practice.'
+    assert elements_page.icon.exist()
+    assert elements_page.btn_sidebar_first.exist()
+    assert elements_page.btn_sidebar_first_textbox.exist()
+
+
+
 
 
