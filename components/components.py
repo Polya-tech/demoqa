@@ -22,7 +22,7 @@ class WebElement:
     def get_text(self):
         return str(self.find_element().text)
 
-    def visit(self):
+    def visible(self):
         self.find_element().is_displayed()
 
 
