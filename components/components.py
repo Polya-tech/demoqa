@@ -25,5 +25,8 @@ class WebElement:
     def visible(self):
         self.find_element().is_displayed()
 
+    def send_keys(self, text: str): #gолучает текст типа str
+        self.find_element().send_keys(text)
+
 
 
