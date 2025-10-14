@@ -1,7 +1,7 @@
 from pages.text_box_clear import TextBox
 import time
 
-def test_clear(browser):
+def test_text_box(browser):
     text_box = TextBox(browser)
 
     # full_name_text = "Иван"   # Переменные с тестовыми данными
