@@ -42,5 +42,8 @@ def test_click_state_and_city(browser):
     state_and_city.element_state_and_city.scroll_to_elements()
     state_and_city.state.click()
     time.sleep (2)
+    state_and_city.state.send_keys('NCR')
+
+    
 
 
