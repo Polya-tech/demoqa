@@ -44,6 +44,9 @@ def test_click_state_and_city(browser):
     time.sleep (2)
     state_and_city.state.send_keys('NCR')
 
+FAILED tests/tests_hw/test_login_form_validate.py::test_click_state_and_city - selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+
+
     
 
 
