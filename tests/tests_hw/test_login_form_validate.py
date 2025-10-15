@@ -29,3 +29,18 @@ def test_practice_form(browser):
     
     # assert first_name_placeholder == 'First Name'
     # assert email_pattern == 'First Name'
+
+def test_click_state_and_city(browser):
+    state_and_city = PracticeForm(browser)
+
+    state_and_city.visit()
+
+
+    assert state_and_city.state.exist()
+    assert state_and_city.city.exist()
+
+    state_and_city.element_state_and_city.scroll_to_elements()
+    state_and_city.state.click()
+    time.sleep (2)
+
+
