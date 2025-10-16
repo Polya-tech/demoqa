@@ -30,8 +30,6 @@ def test_click_state_and_city(browser):
 
     state_and_city.element_state_and_city.scroll_to_elements()
     state_and_city.state_container.click()
-    # time.sleep (5)
-    # state_and_city.state_container.send_keys('NCR')
     state_and_city.state_input.send_keys("Haryana")
     state_and_city.state_input.send_keys(Keys.ENTER)
 
