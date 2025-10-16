@@ -1,5 +1,6 @@
 from pages.practice_form import PracticeForm
 import time
+from selenium.webdriver.common.keys import Keys
 
 def test_practice_form(browser):
     test_pf = PracticeForm(browser)
@@ -19,8 +20,34 @@ def test_practice_form(browser):
 
     assert test_pf.validated_form.get_dom_attribute('class') == 'was-validated'
 
+def test_click_state_and_city(browser):
+    state_and_city = PracticeForm(browser)
+
+    state_and_city.visit()
 
 
+    assert state_and_city.element_state_and_city.exist()
+
+    state_and_city.element_state_and_city.scroll_to_elements()
+    state_and_city.state_container.click()
+    # time.sleep (5)
+    # state_and_city.state_container.send_keys('NCR')
+    state_and_city.state_input.send_keys("Haryana")
+    state_and_city.state_input.send_keys(Keys.ENTER)
+
+    time.sleep(3)
+    state_and_city.city_container.click()
+    time.sleep(2)
+    state_and_city.city_input.send_keys('Karnal')
+    state_and_city.state_input.send_keys(Keys.ENTER)
+    time.sleep(2)
+
+
+
+
+
+
+    # относится к def test_practice_form
     # first_name_placeholder = test_pf.first_name.get_dom_attribute('placeholder')
     # email_pattern = test_pf.email.get_dom_attribute('pattern')
     
@@ -30,21 +57,7 @@ def test_practice_form(browser):
     # assert first_name_placeholder == 'First Name'
     # assert email_pattern == 'First Name'
 
-def test_click_state_and_city(browser):
-    state_and_city = PracticeForm(browser)
 
-    state_and_city.visit()
-
-
-    assert state_and_city.state.exist()
-    assert state_and_city.city.exist()
-
-    state_and_city.element_state_and_city.scroll_to_elements()
-    state_and_city.state.click()
-    time.sleep (2)
-    state_and_city.state.send_keys('NCR')
-
-FAILED tests/tests_hw/test_login_form_validate.py::test_click_state_and_city - selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
 
 
     
