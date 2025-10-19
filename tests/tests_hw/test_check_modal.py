@@ -1,5 +1,4 @@
 from pages.modal_dialogs import ModalDialogs
-from pages.demoqa import DemoQa
 import time
 
 def test_modal_elements(browser):
